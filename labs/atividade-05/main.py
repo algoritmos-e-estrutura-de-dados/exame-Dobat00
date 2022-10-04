@@ -40,7 +40,7 @@ def maximizar_troca_de_figurinhas(figurinhas_da_maria, figurinhas_do_joao):
             figurinhas_trocaveis_maria = len(figurinhas_da_maria)
 
     elif (len(figurinhas_da_maria)< len(figurinhas_do_joao)):
-        if(figurinhas_diferentes_joao == len(figurinhas_do_joao):
+        if(figurinhas_diferentes_joao == len(figurinhas_do_joao)):
             figurinhas_trocaveis_joao = len(figurinhas_do_joao)
 
     
