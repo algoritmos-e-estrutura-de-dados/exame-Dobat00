@@ -1,4 +1,4 @@
-def maximizar_troca_de_figurinhas(figurinhas_da_maria, figurinhas_do_joao):
+def maximizar_troca_de_figurinhas(A,B,figurinhas_da_maria, figurinhas_do_joao):
     figurinhas_trocaveis_maria = 0
     figurinhas_trocaveis_joao = 0
     figurinhas_trocaveis_total = 0
@@ -56,4 +56,4 @@ if __name__ == '__main__':
     
     figurinhas_do_joao = input("Quais sao as figurinhas e Joao?(separados por um espaco em branco)\n").split(' ')
     
-    maximizar_troca_de_figurinhas(figurinhas_da_maria, figurinhas_do_joao)
+    maximizar_troca_de_figurinhas(A,B,figurinhas_da_maria, figurinhas_do_joao)
