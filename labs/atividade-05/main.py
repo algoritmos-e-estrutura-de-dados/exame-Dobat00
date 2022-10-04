@@ -1,55 +1,36 @@
 def maximizar_troca_de_figurinhas(figurinhas_da_maria, figurinhas_do_joao):
-    figurinhas_trocaveis_maria = 0
-    figurinhas_trocaveis_joao = 0
-    figurinhas_trocaveis_total = 0
+    figurinhas_repetidas_maria= 0
+    figurinhas_repetidas_joao = 0
     figurinhas_diferentes_maria = 0
-    figurinhas_diferentes_joao = 0
-    quantidade_figurinhas_maria =0
-    quantidade_figurinhas_joao = 0
-    aux = 0
-
+    figurinhas_diferentes_joao =0
+    figurinhas_trocaveis_total = 0
     
-    for x in figurinhas_da_maria:
-        quantidade_figurinhas_maria = quantidade_figurinhas_maria + 1
-        for y in figurinhas_da_maria:
-            if (x == y):
-                figurinhas_trocaveis_maria = figurinhas_trocaveis_maria + 1
+    
+    for i in figurinhas_da_maria:
+        for j in figurinhas_da_maria:
+            if (i == j):
+                figurinhas_repetidas_maria = figurinhas_repetidas_maria+ 1
             else:
                 figurinhas_diferentes_maria = figurinhas_diferentes_maria + 1
-
-    figurinhas_trocaveis_maria = int(figurinhas_trocaveis_maria) - int(quantidade_figurinhas_maria)
-    figurinhas_trocaveis_maria = figurinhas_trocaveis_maria/2
-    figurinhas_diferentes_maria = figurinhas_diferentes_maria/2
-
+    figurinhas_repetidas_maria = figurinhas_repetidas_maria - len(figurinhas_da_maria)
     
-    for x in figurinhas_do_joao:
-        quantidade_figurinhas_joao = quantidade_figurinhas_joao + 1
-        for y in figurinhas_do_joao:
-            if (x == y):
-                figurinhas_trocaveis_joao = figurinhas_trocaveis_joao + 1
+    
+    for i in figurinhas_do_joao:
+        for j in figurinhas_do_joao:
+            if (i==j):
+                figurinhas_repetidas_joao = figurinhas_repetidas_joao+1
             else:
                 figurinhas_diferentes_joao = figurinhas_diferentes_joao + 1
-
-    figurinhas_trocaveis_joao = int(figurinhas_trocaveis_joao) - int(quantidade_figurinhas_joao)
-    figurinhas_trocaveis_joao = figurinhas_trocaveis_joao/2          
-    figurinhas_diferentes_joao = figurinhas_diferentes_joao/2
-
+    figurinhas_repetidas_joao = figurinhas_repetidas_joao - len(figurinhas_do_joao)
     
-    if (len(figurinhas_da_maria)> len(figurinhas_do_joao)):
-        if (figurinhas_diferentes_maria == len(figurinhas_da_maria)):
-            figurinhas_trocaveis_maria = len(figurinhas_da_maria)
-
-    elif (len(figurinhas_da_maria)< len(figurinhas_do_joao)):
-        if(figurinhas_diferentes_joao == len(figurinhas_do_joao)):
-            figurinhas_trocaveis_joao = len(figurinhas_do_joao)
-
     
-            
-        
-
-    figurinhas_trocaveis_total = figurinhas_trocaveis_maria+figurinhas_trocaveis_joao
+    
+    figurinhas_trocaveis_total = figurinhas_repetidas_joao + figurinhas_repetidas_maria
+    if (figurinhas_diferentes_maria == 2*len(figurinhas_da_maria)):
+        figurinhas_trocaveis_total = len(figurinhas_da_maria)
     print(int(figurinhas_trocaveis_total))
-    return figurinhas_trocaveis_total
+    return figurinhas_trocaveis_total       
+
 
 
 
