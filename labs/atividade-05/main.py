@@ -23,8 +23,6 @@ def maximizar_troca_de_figurinhas(figurinhas_da_maria, figurinhas_do_joao):
         for j in figurinhas_do_joao:
             if (i==j):
                 figurinhas_repetidas_joao = figurinhas_repetidas_joao+1
-                if (i == figurinhas_do_joao[aux+1]):
-                    figurinhas_repetidas_joao = figurinhas_repetidas_joao -1
             else:
                 figurinhas_diferentes_joao = figurinhas_diferentes_joao + 1
         
