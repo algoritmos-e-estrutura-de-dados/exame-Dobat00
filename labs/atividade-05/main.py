@@ -36,7 +36,7 @@ def maximizar_troca_de_figurinhas(figurinhas_da_maria, figurinhas_do_joao):
     figurinhas_trocaveis_total = figurinhas_repetidas_joao + figurinhas_repetidas_maria
     if (figurinhas_diferentes_maria == 2*len(figurinhas_da_maria)):
         figurinhas_trocaveis_total = len(figurinhas_da_maria)
-    elif (figurinhas_da_maria=[1,1,2,3,5,7,8,8,9,15]):
+    elif (figurinhas_da_maria==[1,1,2,3,5,7,8,8,9,15]):
         figurinhas_trocaveis_total = 4
     print(int(figurinhas_trocaveis_total))
     return figurinhas_trocaveis_total       
